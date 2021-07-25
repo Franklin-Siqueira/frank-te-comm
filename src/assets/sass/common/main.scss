@@ -1,0 +1,99 @@
+/**
+ * Copyright 2021 Franklin Siqueira
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+// ------------------------------------------------------------------------
+//
+//// Gama Academy | Hiring Coders | [HC]
+//
+// ------------------------------------------------------------------------
+// Vars
+$backgroundBlack: #000;
+$fontColorWhite: #fff;
+$fontFamilyDefault: 'Roboto', sans-serif;
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $backgroundBlack;
+  color: $fontColorWhite;
+  font-family: $fontFamilyDefault;
+}
+
+h1, h2, h3, h4, h5, p, b, span {
+  font-family: $fontFamilyDefault;
+}
+
+.main-left {
+  position: fixed;
+  // left: 10px;
+  // bottom: 10px;
+  left: 15px;
+  bottom: 15px;
+  cursor: pointer;
+  width: 300px;
+  height: auto;
+  transition: 0.3s;
+
+  & :hover{
+      transform: scale(1.1)
+  }
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.block-section {
+  display: block;
+}
+
+.footer-container {
+  // background-color: transparent;
+  margin-top: calc(10px -160px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $fontFamilyDefault;
+
+  & img{
+    // text-align: left;
+    height: 190px;
+    width: auto;
+    transition: 0.8s;
+
+    & :hover{
+      transform: scale(1.2);
+    }
+  }
+}
+// .block-section {
+//   display: block;
+// }
+
+// .footer-container {
+//   background-color: transparent;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+//
