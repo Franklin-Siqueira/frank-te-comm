@@ -1,40 +1,36 @@
-# Welcome to HC-eComm2021 v1.0- A Basic e-Commerce Landing Page Exercise
+# Welcome to frank-te-comm v1.0- A Basic CRUD  Exercise
 
-Desafio - Criar um sistema de e-commerce para cadastro de email na landing page para recebimento de novidades e promoções.
+Desafio - Criar um sistema para cadastro de dados de usuários e produtos
 
 ## 1°. Entrega 
 
-- Site Oficial / Landing page  
+- Site Oficial  
 
 ## Entregáveis: 
 
--Template do site oficial 
+- Template do site oficial 
 
--Landing page de promoções, estilo black friday; 
+- Página com funcionalidades de cadastro de usuários e produtos no "localstorage";  
 
--Cadastre seu e-mail para receber promoções 
-
--Dados no localstorage
+- Dados no localstorage
 
 - Não é preciso ter domínio próprio e recomendamos o Netlify para hospedagem.git
 
 ## Resultado:
 
-O aplicativo foi montado, tendo em vista uma aplicação completa (escalável). A landing page apresentada faz parte de um contexto mais amplo, em desenvolvimento.
+O aplicativo foi montado, tendo em vista uma aplicação completa (escalável). A página apresentada faz parte de um contexto mais amplo, em desenvolvimento.
 
 O endereço do exercício é o seguinte:
 
 [Web site here]
 
-Como exercício para o aprendizado, desenvolveu-se a página na área dedicada aos testes, situada no diretório [src/assets/lab/frontend]. As demais páginas estão indisponíves, visto estarem fora do escopo do presente exercício.
-
-Trata-se de uma aplicação de página única, ou Single Page Application (SPA).
+...
 
 Para os estilos utilizados na página indexLandPage.js foram empregados os componentes desenvolvidos com a biblioteca 'styled-components' (https://www.npmjs.com/package/styled-components/v/4.1.3).
 
-Apesar da recomendação para hospedagem na plataforma Netlify (https://www.netlify.com/), optou-se pela plataforma Heroku (https://www.heroku.com), 
+...... Apesar da recomendação para hospedagem na plataforma Netlify (https://www.netlify.com/), optou-se pela plataforma Heroku (https://www.heroku.com), 
 
-As referências utilizadas e os agradecimentos vão para:
+.... As referências utilizadas e os agradecimentos vão para:
 
 Todos os instrutures, mentores e alunos da Gama Academy (https://www.gama.academy/), e
 
@@ -47,15 +43,15 @@ Todos os instrutures, mentores e alunos da Gama Academy (https://www.gama.academ
 
 ## Hospedando o app
 
-Após criar a sua conta e confirmar os seus dados no Heroku, siga os passos detalhados na plataforma. 
+......Após criar a sua conta e confirmar os seus dados no Heroku, siga os passos detalhados na plataforma. 
 
-Contudo, no caso do React, a instrução abaixo é FUNDAMENTAL.
+.... Contudo, no caso do React, a instrução abaixo é FUNDAMENTAL.
 
 #### Um passo que não se pode escapar diz respeito ao buidpack para o react. 
 
 Siga para a página das configurações do aplicativo e adicione:
 
-1. Buildpack para o React:
+1. Buildpack para o React (para hospedagem no Heroku):
 
 - https://buildpack-registry.s3.amazonaws.com/buildpacks/mars/create-react-app.tgz
 
