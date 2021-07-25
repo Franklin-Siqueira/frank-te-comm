@@ -16,19 +16,20 @@
 //// Gama Academy | Hiring Coders | [HC] Challenge 01 | Landing Page
 //
 // ------------------------------------------------------------------------
-//  src/assets/lab/frontEnd/CardOne.js
+//  src/components/styled/formCard.js
 // ------------------------------------------------------------------------
 /** Imports (requirements) ................................*/
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../../assets/styles/common/devices/mixins";
 /** Vars for CardContainer styled component ................*/
 const bdrTplft = 8;
 const bdrBtlft = 8;
-/** Exports .................................................*/
+/** Return  .................................................*/
 /**
- * Card(  
+ * @param {*} props
+ * @returns
+ * FormCard(  
  *        cardImage=IMAGE
  *        cardImageAlt=TEXT
  *        cardFormHead=TEXT
@@ -37,34 +38,72 @@ const bdrBtlft = 8;
  *        cardInputValue=ARRAY OF State variables TODO
  *        cardInputPlaceHolder
  *        cardSubmitButtonText=TEXT
- *        cardInputErrorMessage=ERROR message TEXT
- *        )
- * @param {*} props
- * @returns
+ *        cardInputErrorMessage=ERROR message TEXT)
  ..............................................................*/
-export function Card(props) {
+export function FormCard(props) {
   //
   // States
   //
-  const [boolError, setEmailError] = useState(false);
-  const [userInput, setUserEmail] = useState("");
-  const navHistory = useHistory();
+  const [boolError, setFomError] = useState(false);
+  const [userNameInput, setUserNameInput] = useState("");
+  const [userEmailInput, setUserEmailInput] = useState("");
+  const [users, setUsers] = useState([{ userName: "", userEmail: "" }]);
   //
   // Handlers
   //
-  const handlelInputValue = (e) => {
-    e.persist();
-    setUserEmail(e.target.value);
-    // console.log(userEmail.userEmail);
+  const keyPressed = ({ key }) => {
+    // Capture input on Enter key
+    if (key === "Enter") {
+      handleCardForm();
+    }
   };
-  const handleForm = () => {
-    if (userInput === "" || userInput.indexOf("@") === -1) {
+  const handlelNameInput = (e) => {
+    e.persist();
+    setUserNameInput(e.target.value);
+    setUsers((users) => ({
+      ...users,
+      userName: e.target.value,
+    }));
+  };
+  const handlelEmailInput = (e) => {
+    e.persist();
+    setUserEmailInput(e.target.value);
+    setUsers((users) => ({
+      ...users,
+      userEmail: e.target.value,
+    }));
+  };
+  ///
+  const localStorageCreateItem = () => {
+    localStorage.setItem(
+      "users",
+      JSON.stringify([
+        { users: { userName: userNameInput, userEmail: userEmailInput } },
+      ])
+    );
+  };
+  const localStorageAppendItem = () => {
+    var userLS = [];
+    userLS = JSON.parse(localStorage.getItem("users"));
+    userLS.push(users);
+    alert(`userLS => ${userLS} with a type of ${typeof(userLS)} and "users" has a type of ${typeof(users)} `);
+    console.log(userLS);
+    localStorage.setItem(
+      "users",
+      JSON.stringify(userLS));
+      alert(`${localStorage.getItem("users")} and type ${typeof(localStorage.getItem("users"))}`);
+  };
+  const handleCardForm = () => {
+    if (userNameInput === "" || userEmailInput === "") {
       console.log(props.cardInputErrorMessage);
-      setEmailError(true);
+      setFomError(true);
       return;
     }
-    localStorage.setItem("guestData", userInput);
-    navHistory.push("/#");
+    const localStorageItems = !localStorage.getItem("users")
+      ? localStorageCreateItem()
+      : localStorageAppendItem();
+    //
+    console.log(localStorageItems);
   };
   //
   // Render
@@ -92,13 +131,20 @@ export function Card(props) {
           </CardText>
           <CardFormGroup>
             <CardInput
-              value={userInput}
+              value={userNameInput}
               placeholder={props.cardInputPlaceHolder}
-              onChange={handlelInputValue}
+              onChange={handlelNameInput}
+              onKeyPress={keyPressed}
+            />
+            <CardInput
+              value={userEmailInput}
+              placeholder={props.cardInputPlaceHolder}
+              onChange={handlelEmailInput}
+              onKeyPress={keyPressed}
             />
           </CardFormGroup>
           {/* <CardFormGroup> */}
-          <CardFormButton onClick={handleForm}>
+          <CardFormButton onClick={handleCardForm}>
             {props.cardSubmitButtonText}
           </CardFormButton>
           {boolError ? (
@@ -186,8 +232,8 @@ export const CardImage = styled.img`
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 450px;
-  height: 100%;
+  width: 350px;
+  height: auto;
   opacity: 0.99 !important;
   z-index: 1;
   overflow-y: auto;

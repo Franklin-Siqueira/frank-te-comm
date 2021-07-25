@@ -24,7 +24,7 @@ import styled from "styled-components";
 export const NavBarUl = styled.ul`
     z-index: 3;
     position: absolute;
-    bottom: 75%;
+    bottom: 60%;
     right: 3%;
     // background-color: yellow:
     // cursor: pointer;

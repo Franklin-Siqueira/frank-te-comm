@@ -16,19 +16,20 @@
 //// Gama Academy | Hiring Coders | [HC] Challenge 01 | Landing Page
 //
 // ------------------------------------------------------------------------
-//  src/assets/lab/frontEnd/CardOne.js
+//  src/components/styled/formCard.js
 // ------------------------------------------------------------------------
 /** Imports (requirements) ................................*/
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { device } from "../../assets/styles/common/devices/mixins";
 /** Vars for CardContainer styled component ................*/
 const bdrTplft = 8;
 const bdrBtlft = 8;
-/** Exports .................................................*/
+/** Return  .................................................*/
 /**
- * Card(  
+ * @param {*} props
+ * @returns
+ * FormCard(  
  *        cardImage=IMAGE
  *        cardImageAlt=TEXT
  *        cardFormHead=TEXT
@@ -37,34 +38,72 @@ const bdrBtlft = 8;
  *        cardInputValue=ARRAY OF State variables TODO
  *        cardInputPlaceHolder
  *        cardSubmitButtonText=TEXT
- *        cardInputErrorMessage=ERROR message TEXT
- *        )
- * @param {*} props
- * @returns
+ *        cardInputErrorMessage=ERROR message TEXT)
  ..............................................................*/
-export function Card(props) {
+export function FormCard(props) {
   //
   // States
   //
-  const [boolError, setEmailError] = useState(false);
-  const [userInput, setUserEmail] = useState("");
-  const navHistory = useHistory();
+  const [boolError, setFomError] = useState(false);
+  const [userModelInput, setUserModelInput] = useState("");
+  const [userYearInput, setUserYearInput] = useState("");
+  const [cars, setCars] = useState([{ carModel: "", carYear: "" }]);
   //
   // Handlers
   //
-  const handlelInputValue = (e) => {
-    e.persist();
-    setUserEmail(e.target.value);
-    // console.log(userEmail.userEmail);
+  const keyPressed = ({ key }) => {
+    // Capture input on Enter key
+    if (key === "Enter") {
+      handleCardForm();
+    }
   };
-  const handleForm = () => {
-    if (userInput === "" || userInput.indexOf("@") === -1) {
+  const handlelModelInput = (e) => {
+    e.persist();
+    setUserModelInput(e.target.value);
+    setCars((cars) => ({
+      ...cars,
+      carModel: e.target.value,
+    }));
+  };
+  const handlelYearInput = (e) => {
+    e.persist();
+    setUserYearInput(e.target.value);
+    setCars((cars) => ({
+      ...cars,
+      carYear: e.target.value,
+    }));
+  };
+  ///
+  const localStorageCreateItem = () => {
+    localStorage.setItem(
+      "cars",
+      JSON.stringify([
+        { cars: { carModel: userModelInput, carYear: userYearInput } },
+      ])
+    );
+  };
+  const localStorageAppendItem = () => {
+    var carsLS = [];
+    carsLS = JSON.parse(localStorage.getItem("cars"));
+    carsLS.push(cars);
+    alert(`carsLS => ${carsLS} with a type of ${typeof(carsLS)} and "cars" has a type of ${typeof(cars)} `);
+    console.log(carsLS);
+    localStorage.setItem(
+      "cars",
+      JSON.stringify(carsLS));
+      alert(`${localStorage.getItem("cars")} and type ${typeof(localStorage.getItem("cars"))}`);
+  };
+  const handleCardForm = () => {
+    if (userModelInput === "" || userYearInput === "") {
       console.log(props.cardInputErrorMessage);
-      setEmailError(true);
+      setFomError(true);
       return;
     }
-    localStorage.setItem("guestData", userInput);
-    navHistory.push("/#");
+    const localStorageItems = !localStorage.getItem("cars")
+      ? localStorageCreateItem()
+      : localStorageAppendItem();
+    //
+    console.log(localStorageItems);
   };
   //
   // Render
@@ -92,13 +131,20 @@ export function Card(props) {
           </CardText>
           <CardFormGroup>
             <CardInput
-              value={userInput}
+              value={userModelInput}
               placeholder={props.cardInputPlaceHolder}
-              onChange={handlelInputValue}
+              onChange={handlelModelInput}
+              onKeyPress={keyPressed}
+            />
+            <CardInput
+              value={userYearInput}
+              placeholder={props.cardInputPlaceHolder}
+              onChange={handlelYearInput}
+              onKeyPress={keyPressed}
             />
           </CardFormGroup>
           {/* <CardFormGroup> */}
-          <CardFormButton onClick={handleForm}>
+          <CardFormButton onClick={handleCardForm}>
             {props.cardSubmitButtonText}
           </CardFormButton>
           {boolError ? (
@@ -186,8 +232,8 @@ export const CardImage = styled.img`
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 450px;
-  height: 100%;
+  width: 350px;
+  height: auto;
   opacity: 0.99 !important;
   z-index: 1;
   overflow-y: auto;

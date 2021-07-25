@@ -27,7 +27,10 @@ import "./index.css";
 import OPoder from "./../assets/images/home/000-mercedes-benz-vehicles-e-class-e-400-4matic-coupe-c-238-2560x1440-2560x1440.jpeg";
 import * as S from "../components/styled/boxStyles";
 import * as C from "../components/styled/CardOne";
+import * as F from "../components/styled/formCard";
+import * as U from "../components/styled/formCardUser"
 import * as Nav from "../components/styled/fixedRawNavbar";
+import ProductsView from "./../views/products/index";
 /**  */
 export default function LandingPage() {
   // Navbar
@@ -36,6 +39,8 @@ export default function LandingPage() {
     { txt: "TO", link: "/#boxOpacity" },
     { txt: "NEW", link: "/#boxBlur" },
     { txt: "LEVEL", link: "/#boxGrayScale" },
+    { txt: "+Car", link: "/#boxAddCar" },
+    { txt: "+User", link: "/#boxAddUser" }
   ];
   // Box Text
   const firstBoxHeader = "Car Dealership Concept";
@@ -59,6 +64,27 @@ export default function LandingPage() {
   const cardInputPlaceHolder = "your e-mail here";
   const emailInvalidInputMessage = "Please, enter a valid e-mail address...";
   const cardSubmitButtonText = "Submit";
+  //
+  // Car Create Form Vars
+  const formCarHead = "Add a New Car Here!";
+  const formCarSub = "It's that simple...";
+  const formCarParag =
+    "After pressing the button below, have a look at Local Storage.";
+  // cardInputValue={userEmail}
+  const formCarPH = "name your car here...";
+  const formCarBT = "ADD CAR";
+  const formCarInputEM = "Sorry! It's not a valid car's name...";
+  //
+  // User Create Form Vars
+  const formUserHead = "Add a New User Here!";
+  const formUserSub = "It's that simple...";
+  const formUserParag =
+    "After pressing the button below, have a look at Local Storage.";
+  // cardInputValue={userEmail}
+  const formUserPH = "user name here...";
+  const formUserBT = "ADD USER";
+  const formUserInputEM = "Sorry! It's not a valid person's name...";
+  //
   // States
   const [userEmail, setUserEmail] = useState("");
   const [emailError, setEmailError] = useState(false);
@@ -120,39 +146,13 @@ export default function LandingPage() {
         </S.BoxOpacity>
         {/* <S.BoxBrightness id="boxBright">{textBoxFour}</S.BoxBrightness> */}
         <S.BoxBlur id="boxBlur">
-          <C.CardContainer>
-            {/*  */}
-            <C.CardLeftSideContainer>
-              <C.CardImageContainer>
-                <C.CardImage src={cardImage} alt={cardImageAlt} />
-              </C.CardImageContainer>
-            </C.CardLeftSideContainer>
-            {/*  */}
-            <C.CardRightSideContainer>
-              <C.CardFormContainer>
-                <C.CardFormHeader>{cardHeaderText}</C.CardFormHeader>
-                <C.CardFormSubHeader>{cardSubheaderText}</C.CardFormSubHeader>
-                <C.CardText>{cardParagraphText}</C.CardText>
-                <C.CardFormGroup>
-                  <C.CardInput
-                    value={userEmail}
-                    onChange={handleEmailInput}
-                    placeholder={cardInputPlaceHolder}
-                  />
-                </C.CardFormGroup>
-                <C.CardFormButton onClick={handleForm}>
-                  {cardSubmitButtonText}
-                </C.CardFormButton>
-                {emailError ? (
-                  <C.CardInputError>
-                    {emailInvalidInputMessage}
-                  </C.CardInputError>
-                ) : (
-                  ""
-                )}
-              </C.CardFormContainer>
-            </C.CardRightSideContainer>
-          </C.CardContainer>
+        <S.BoxInsiderContainer>
+            <S.BoxFormContainer>
+              <S.BoxFormHeader>{firstBoxHeader}</S.BoxFormHeader>
+              <S.BoxFormSubHeader>{firstBoxSubheader}</S.BoxFormSubHeader>
+              <S.BoxText>{firstBoxCallToNext}</S.BoxText>
+            </S.BoxFormContainer>
+          </S.BoxInsiderContainer>
         </S.BoxBlur>
         <S.BoxGrayscale id="boxGrayScale">
           <C.Card
@@ -167,6 +167,32 @@ export default function LandingPage() {
             cardInputErrorMessage={emailInvalidInputMessage}
           />
         </S.BoxGrayscale>
+        <S.BoxGrayscale id="boxAddCar">
+          <F.FormCard
+            cardImage={OPoder}
+            cardImageAlt={cardImageAlt}
+            cardFormHead={formCarHead}
+            cardFormSubhead={formCarSub}
+            cardParagraphText={formCarParag}
+            cardInputValue={userEmail}
+            cardInputPlaceHolder={formCarPH}
+            cardSubmitButtonText={formCarBT}
+            cardInputErrorMessage={formCarInputEM}
+          />
+        </S.BoxGrayscale>
+        <S.BoxOpacity id="#boxAddUser">
+          <U.FormCard
+            cardImage={OPoder}
+            cardImageAlt={cardImageAlt}
+            cardFormHead={formUserHead}
+            cardFormSubhead={formUserSub}
+            cardParagraphText={formUserParag}
+            cardInputValue={userEmail}
+            cardInputPlaceHolder={formUserPH}
+            cardSubmitButtonText={formUserBT}
+            cardInputErrorMessage={formUserInputEM}
+          />
+        </S.BoxOpacity>
       </S.BoxesContainer>
       {/* <S.PageContainerFooter>test</S.PageContainerFooter> */}
     </S.PageContainer>
