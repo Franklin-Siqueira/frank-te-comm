@@ -5,16 +5,10 @@
 
 [![Linkedin](https://i.stack.imgur.com/gVE0j.png)](https://www.linkedin.com/in/franklin-c-siqueira)
 
-
 [![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg) [![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com/)  [![Npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://npmjs.com/)
   [![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/)
 
-
-
 [![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=Franklin-Siqueira&theme=blue-green)](https://github.com/Franklin-Siqueira/github-readme-stats)[![DenverCoder1's github streak](https://github-readme-streak-stats.herokuapp.com/?user=Franklin-Siqueira&theme=blue-green)](https://github.com/DenverCoder1/github-readme-streak-stats)
-
-
-
 
 [![Franklin's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Franklin-Siqueira&theme=blue-green)](https://github.com/anuraghazra/github-readme-stats)
 
@@ -22,7 +16,6 @@
 
 #### **About this project**
 <br/>
-
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Franklin-Siqueira/Vtex-GA-HC21-ChallengeUpMedal/graphs/commit-activity) [![GitLab last commit](https://badgen.net/github/last-commit/Franklin-Siqueira/Vtex-GA-HC21-ChallengeUpMedal/)](https://github.com/Franklin-Siqueira/Vtex-GA-HC21-ChallengeUpMedal/-/commits)
 
@@ -33,18 +26,16 @@
 
 [![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/)
 
-
-
-### **Desafio** 
+### **Desafio**
 
 - Criar uma **landing page** para uma loja fictícia, com um formulário para captação de **leads**.
 
-#### **Texto do desafio** (reprodução)
+#### **Texto do desafio** (reprodução do original)
 
 Desafio 2# - Gestão de Cadastros
 Hellooo!
 
-Chegou a hora de mais uma atividade prática - UHUUUL   
+Chegou a hora de mais uma atividade prática - UHUUUL
 
 2° Entrega - Gestão de Cadastros
 Criação de um sistema e-commerce para inventário de produtos e dados de clientes:
@@ -58,11 +49,11 @@ Bora lá? Então valendo! Esse desafio é individual, mas incentivamos que você
 
 Valeeendo \o/
 
-## 1° Entrega 
+## 1° Entrega
 
 - Site Oficial  
 
-### Entregáveis: 
+### Entregáveis
 
 - Template do site;
 
@@ -72,7 +63,7 @@ Valeeendo \o/
 
 - Não é preciso ter domínio próprio e recomendamos o Netlify para hospedagem.
 
-## Resultado:
+## Resultado
 
 O aplicativo foi montado, tendo em vista uma aplicação simples (escalável). A página apresentada faz parte de um contexto mais amplo, em desenvolvimento.
 
@@ -103,7 +94,7 @@ Todos os instrutures, mentores e alunos da [Gama Academy](https://www.gama.acade
 
 ## Hospedando o app (Netlify)
 
-. Após criar a sua conta e confirmar os seus dados no [Netlify](), siga os passos detalhados na plataforma;
+. Após criar a sua conta e confirmar os seus dados no [Netlify](https://www.netlify.com/), siga os passos detalhados na plataforma;
 
 . Contudo, no caso do React, a instrução abaixo é FUNDAMENTAL.
 
@@ -111,12 +102,9 @@ Todos os instrutures, mentores e alunos da [Gama Academy](https://www.gama.acade
 
 Siga para a página das configurações do aplicativo e adicione:
 
-. Buildpack para o React (para hospedagem no **Heroku**):
+. Buildpack para o React (para hospedagem na [Heroku](https://www.heroku.com)):
 
 - https://buildpack-registry.s3.amazonaws.com/buildpacks/mars/create-react-app.tgz
-
-
-
 
 ---
 **Building**
@@ -136,17 +124,13 @@ This will start the dev server at localhost:1234.
 
 The source code is contained in the src folder...
 
-
 <br />
 <br />
 
 ---
 **License**
 
-
-
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Franklin-Siqueira/dioshopping/blob/main/LICENSE.md)
-
 
 This sample code is released using the MIT license. For more information see the [LICENSE](https://github.com/Franklin-Siqueira/dioshopping/blob/main/LICENSE.md) file.
 
