@@ -1,7 +1,5 @@
-## Project: frank-te-comm v1. 0- A Basic CRUD Exercise
+## Project: frank-te-comm v1. 0 - A Basic Styled Components Exercise
 
-
-## React-example
 ---
 #### **About me**
 
@@ -39,7 +37,7 @@
 
 ### **Desafio** 
 
-- Criar um sistema para cadastro de dados de usuários e produtos
+- Criar uma **landing page** para uma loja fictícia, com um formulário para captação de **leads**.
 
 #### **Texto do desafio** (reprodução)
 
@@ -66,27 +64,31 @@ Valeeendo \o/
 
 ### Entregáveis: 
 
-- Template do site oficial 
+- Template do site;
 
-- Página com funcionalidades de cadastro de usuários e produtos no "localstorage";  
+- Página com funcionalidades de cadastro de **leads** no **localstorage**;  
 
 - Dados no localstorage
 
-- Não é preciso ter domínio próprio e recomendamos o Netlify para hospedagem.git
+- Não é preciso ter domínio próprio e recomendamos o Netlify para hospedagem.
 
 ## Resultado:
 
-O aplicativo foi montado, tendo em vista uma aplicação completa (escalável). A página apresentada faz parte de um contexto mais amplo, em desenvolvimento.
+O aplicativo foi montado, tendo em vista uma aplicação simples (escalável). A página apresentada faz parte de um contexto mais amplo, em desenvolvimento.
 
 O endereço do exercício é o seguinte:
 
-[Web site here]
+[Visite](https://unclefrank-labs-cardealer.netlify.app/)
+
+Plataforma:
+
+[Netlify](https://www.netlify.com/),
 
 ...
 
 Para os estilos utilizados na página indexLandPage.js foram empregados os componentes desenvolvidos com a biblioteca [styled-components](https://www.npmjs.com/package/styled-components/v/4.1.3).
 
-...... Apesar da recomendação para hospedagem na plataforma [Netlify](https://www.netlify.com/), optou-se pela plataforma [Heroku](https://www.heroku.com),
+...... Apesar da recomendação para hospedagem na plataforma [Netlify](https://www.netlify.com/), optou-se por adicionar uma versão para plataforma [Heroku](https://www.heroku.com),
 
 .... As referências utilizadas e os agradecimentos vão para:
 
@@ -99,9 +101,9 @@ Todos os instrutures, mentores e alunos da [Gama Academy](https://www.gama.acade
 
 # Algumas Instruções Básicas
 
-## Hospedando o app
+## Hospedando o app (Netlify)
 
-. Após criar a sua conta e confirmar os seus dados no Heroku, siga os passos detalhados na plataforma;
+. Após criar a sua conta e confirmar os seus dados no [Netlify](), siga os passos detalhados na plataforma;
 
 . Contudo, no caso do React, a instrução abaixo é FUNDAMENTAL.
 
@@ -109,7 +111,7 @@ Todos os instrutures, mentores e alunos da [Gama Academy](https://www.gama.acade
 
 Siga para a página das configurações do aplicativo e adicione:
 
-1. Buildpack para o React (para hospedagem no Heroku):
+. Buildpack para o React (para hospedagem no **Heroku**):
 
 - https://buildpack-registry.s3.amazonaws.com/buildpacks/mars/create-react-app.tgz
 
