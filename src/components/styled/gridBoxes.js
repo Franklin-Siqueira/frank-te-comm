@@ -251,7 +251,7 @@ export const Button = styled.a`
       color: white;
     `}
     
-    @media (min-width: 768px) {
+  @media (min-width: 768px) {
     padding: 1rem 2rem;
     width: 11rem;
   }

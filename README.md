@@ -1,10 +1,47 @@
-# Welcome to frank-te-comm v1.0- A Basic CRUD Exercise
+## Project: frank-te-comm v1. 0- A Basic CRUD Exercise
 
-## Desafio 
+
+## React-example
+---
+#### **About me**
+
+[![Linkedin](https://i.stack.imgur.com/gVE0j.png)](https://www.linkedin.com/in/franklin-c-siqueira)
+
+
+[![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg) [![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com/)  [![Npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://npmjs.com/)
+  [![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/)
+
+
+
+[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=Franklin-Siqueira&theme=blue-green)](https://github.com/Franklin-Siqueira/github-readme-stats)[![DenverCoder1's github streak](https://github-readme-streak-stats.herokuapp.com/?user=Franklin-Siqueira&theme=blue-green)](https://github.com/DenverCoder1/github-readme-streak-stats)
+
+
+
+
+[![Franklin's top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Franklin-Siqueira&theme=blue-green)](https://github.com/anuraghazra/github-readme-stats)
+
+---
+
+#### **About this project**
+<br/>
+
+
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Franklin-Siqueira/Vtex-GA-HC21-ChallengeUpMedal/graphs/commit-activity) [![GitLab last commit](https://badgen.net/github/last-commit/Franklin-Siqueira/Vtex-GA-HC21-ChallengeUpMedal/)](https://github.com/Franklin-Siqueira/Vtex-GA-HC21-ChallengeUpMedal/-/commits)
+
+[![macOS](https://svgshare.com/i/ZjP.svg)](https://svgshare.com/i/ZjP.svg)
+[![Visual Studio Code](https://img.shields.io/badge/--007ACC?logo=visual%20studio%20code&logoColor=ffffff)](https://code.visualstudio.com/)
+
+[![Npm](https://badgen.net/badge/icon/npm?icon=npm&label)](https://https://npmjs.com/)
+
+[![JavaScript](https://img.shields.io/badge/--F7DF1E?logo=javascript&logoColor=000)](https://www.javascript.com/)
+
+
+
+### **Desafio** 
 
 - Criar um sistema para cadastro de dados de usuários e produtos
 
-## Texto do desafio (reprodução)
+#### **Texto do desafio** (reprodução)
 
 Desafio 2# - Gestão de Cadastros
 Hellooo!
@@ -23,11 +60,11 @@ Bora lá? Então valendo! Esse desafio é individual, mas incentivamos que você
 
 Valeeendo \o/
 
-## 1°. Entrega 
+## 1° Entrega 
 
 - Site Oficial  
 
-## Entregáveis: 
+### Entregáveis: 
 
 - Template do site oficial 
 
@@ -47,26 +84,26 @@ O endereço do exercício é o seguinte:
 
 ...
 
-Para os estilos utilizados na página indexLandPage.js foram empregados os componentes desenvolvidos com a biblioteca 'styled-components' (https://www.npmjs.com/package/styled-components/v/4.1.3).
+Para os estilos utilizados na página indexLandPage.js foram empregados os componentes desenvolvidos com a biblioteca [styled-components](https://www.npmjs.com/package/styled-components/v/4.1.3).
 
-...... Apesar da recomendação para hospedagem na plataforma Netlify (https://www.netlify.com/), optou-se pela plataforma Heroku (https://www.heroku.com), 
+...... Apesar da recomendação para hospedagem na plataforma [Netlify](https://www.netlify.com/), optou-se pela plataforma [Heroku](https://www.heroku.com),
 
 .... As referências utilizadas e os agradecimentos vão para:
 
-Todos os instrutures, mentores e alunos da Gama Academy (https://www.gama.academy/), e
+Todos os instrutures, mentores e alunos da [Gama Academy](https://www.gama.academy/), e:
 
-- Styled Components website (https://styled-components.com/docs/basics);
-- CSS Tricks (https://css-tricks.com/almanac/properties/b/backdrop-filter/);
-- UI Hut (https://www.uihut.com/web-template/header-besnik-e-learning-landing-page/8132);
-- Andy Adams (https://codepen.io/andyadams/pen/NQrrJv);
+- Styled Components [website](https://styled-components.com/docs/basics);
+- [CSS Tricks](https://css-tricks.com/almanac/properties/b/backdrop-filter/);
+- [UI Hut](https://www.uihut.com/web-template/header-besnik-e-learning-landing-page/8132);
+- [Andy Adams](https://codepen.io/andyadams/pen/NQrrJv).
 
 # Algumas Instruções Básicas
 
 ## Hospedando o app
 
-......Após criar a sua conta e confirmar os seus dados no Heroku, siga os passos detalhados na plataforma. 
+. Após criar a sua conta e confirmar os seus dados no Heroku, siga os passos detalhados na plataforma;
 
-.... Contudo, no caso do React, a instrução abaixo é FUNDAMENTAL.
+. Contudo, no caso do React, a instrução abaixo é FUNDAMENTAL.
 
 #### Um passo que não se pode escapar diz respeito ao buidpack para o react. 
 
@@ -78,7 +115,44 @@ Siga para a página das configurações do aplicativo e adicione:
 
 
 
-# Getting Started with Create React App
+
+---
+**Building**
+
+If you have Node with NPM installed you can just install the local dependencies after cloning this *repo*:
+
+> $> npm install
+
+Then you can run the local dev server using:
+
+> $> npm start
+
+This will start the dev server at localhost:1234.
+
+---
+**Structure**
+
+The source code is contained in the src folder...
+
+
+<br />
+<br />
+
+---
+**License**
+
+
+
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/Franklin-Siqueira/dioshopping/blob/main/LICENSE.md)
+
+
+This sample code is released using the MIT license. For more information see the [LICENSE](https://github.com/Franklin-Siqueira/dioshopping/blob/main/LICENSE.md) file.
+
+---
+
+## Generic Information
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
