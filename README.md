@@ -15,6 +15,9 @@
 ---
 
 #### **About this project**
+
+<img src="src/assets/img/car-dealer-concept-desktop.png" alt="Car Dealership Concept" width="%"/>
+
 <br/>
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Franklin-Siqueira/Vtex-GA-HC21-ChallengeUpMedal/graphs/commit-activity) [![GitLab last commit](https://badgen.net/github/last-commit/Franklin-Siqueira/Vtex-GA-HC21-ChallengeUpMedal/)](https://github.com/Franklin-Siqueira/Vtex-GA-HC21-ChallengeUpMedal/-/commits)
